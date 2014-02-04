@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>JQuery Effect with Fade</title>
+	<style type="text/css">		
+		.fadeIn1{
+			width: 100px; height: 100px;
+			background: #ffdd55; margin: 10px;
+			display: none;
+		}
+		.fadeOut1{
+			width: 100px; height: 100px;
+			background: #ffdd55; margin: 10px;
+		}
+		.fadeToggle1{
+			width: 100px; height: 100px;
+			background: #ffdd55; margin: 10px;
+			display: none;
+		}
+		.fadeTo1{
+			width: 100px; height: 100px;
+			background: #ffdd55; margin: 10px;
+		}
+	</style>
+</head>
+<body>		
+	
+	<h2>JQUERY FADE IN</h2>
+	<button id="fadeIn">Click me for fade in!</button>
+	<div class="fadeIn1"></div>
+	<div class="fadeIn1"></div>
+	<div class="fadeIn1"></div>
+	
+	<h2>JQUERY FADE OUT</h2>
+	<button id="fadeOut">Click me for fade out!</button>
+	<div class="fadeOut1"></div>
+	<div class="fadeOut1"></div>
+	<div class="fadeOut1"></div>
+	
+	<h2>JQUERY FADE TOGGLE</h2>
+	<button id="fadeToggle">Click me for fade toggle!</button>
+	<div class="fadeToggle1"></div>
+	<div class="fadeToggle1"></div>
+	<div class="fadeToggle1"></div>
+	
+	<h2>JQUERY FADE TO</h2>
+	<button id="fadeTo">Click me for fade TO 0.75!</button>
+	<div class="fadeTo1"></div>
+	<div class="fadeTo1"></div>
+	<div class="fadeTo1"></div>
+	
+	<script type="text/javascript" src="jquery-1.10.1.min.js"></script>
+	
+	<!-- SCRIPT -->
+	<script type="text/javascript">
+		$(document).ready(function() {			
+			
+			// FADE IN
+			$("button#fadeIn").click(function() {
+				// $(selector).fadeIn(speed, callback);
+				$(".fadeIn1:first").fadeIn();
+				$(".fadeIn1").fadeIn("slow");
+				$(".fadeIn1:last").fadeIn(1000);
+			});
+			
+			// FADE OUT
+			$("button#fadeOut").click(function() {				
+				$(".fadeOut1:first").fadeOut();
+				$(".fadeOut1").fadeOut("slow");
+				$(".fadeOut1:last").fadeOut(1000);
+			});
+			
+			// FADE TOGGLE
+			$("button#fadeToggle").click(function(){
+				// $(".fadeToggle1:first").fadeToggle();
+				$(".fadeToggle1").fadeToggle("slow");
+				// $(".fadeToggle1:last").fadeToggle(1000);
+			});
+			
+			// FADE TO
+			// $(selector).fadeTo(speed, opacity, callback);
+			$("button#fadeTo").click(function() {
+				$(".fadeTo1").fadeTo(1000, 0.5);
+			});
+		});
+	</script>
+</body>
+</html>
