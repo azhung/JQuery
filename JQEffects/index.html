@@ -7,21 +7,18 @@
 		.show{
 			display: none;
 		}
+		.fadeIn1{
+			width: 100px; height: 100px;
+			background: #ffdd55; margin: 10px;
+			display: none;
+		}		
 	</style>
 </head>
 <body>
 	
 	<h2>JQUERY HIDE</h2>
 	<button id="hide">Click me for hide!</button>
-	<p class="hide">Hide me! Please. Oh Yeah</p>
-	
-	<h2>JQUERY SHOW</h2>
-	<button id="show">Click me for show!</button>
-	<p class="show">Show me! Please. Oh Yeah</p>
-	
-	<h2>JQUERY TOGGLE</h2>
-	<button id="toggle">Click me for toggle!</button>
-	<p class="toggle">Toggle me! Please. Oh Yeah</p>
+	<p class="hide">Hide me! Please. Oh Yeah</p>	
 	
 	<script type="text/javascript" src="jquery-1.10.1.min.js"></script>
 	
@@ -37,17 +34,7 @@
 					});
 				});
 			});
-			
-			// SHOW
-			$("button#show").click(function() {
-				$("p.show").show(1000);
-			});
-			
-			// TOGGLE
-			$("button#toggle").click(function() {
-				$("p.toggle").toggle(1000);
-			});
-			
+						
 		});
 	</script>
 </body>
