@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>JQuery Tutorial</title>
+	<style type="text/css">
+		.show{
+			display: none;
+		}
+		#panelDown, #panelUp, #panelToggle, #flipDown, #flipUp, #flipToggle {
+			padding:5px;
+			text-align:center;
+			background-color:#e5eecc;
+			border:solid 1px #c3c3c3;
+		}
+		#panelDown, #panelToggle {
+			padding:50px;
+			display:none;
+		}	
+		#panelUp {
+			padding:50px;			
+		}	
+	</style>
+</head>
+<body>
+	
+	<h2>JQUERY SLIDE DOWN</h2>
+	<div id="flipDown">Click to slide down panel</div>
+	<div id="panelDown">Hello world!</div>
+	
+	<h2>JQUERY SLIDE UP</h2>
+	<div id="flipUp">Click to slide up panel</div>
+	<div id="panelUp">Hello world!</div>
+	
+	<h2>JQUERY SLIDE TOGGLE</h2>
+	<div id="flipToggle">Click to slide toggle panel</div>
+	<div id="panelToggle">Hello world!</div>
+	
+	<script type="text/javascript" src="jquery-1.10.1.min.js"></script>
+	
+	<!-- SCRIPT -->
+	<script type="text/javascript">
+		$(function(){
+			// Slide Down
+			$("#flipDown").click(function(){
+				// $(selector).slideUp(speed, callback);
+				$("#panelDown").slideDown();
+			});
+			// Slide Up
+			$("#flipUp").click(function() {
+				$("#panelUp").slideUp(1000);
+			});
+			// Slide Toggle
+			$("#flipToggle").click(function() {
+				$("#panelToggle").slideToggle(1000);				
+			});
+		});
+	</script>
+</body>
+</html>
